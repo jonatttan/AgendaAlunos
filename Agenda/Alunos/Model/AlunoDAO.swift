@@ -43,7 +43,7 @@ class AlunoDAO: NSObject {
         
         guard let id = UUID(uuidString: dicionarioDeAluno["id"] as! String) else { return }
         
-        let alunos = recuperaAlunos().filter() { $0.id == id} //Verifica se ID existe no dicionario de alunos	
+        let alunos = recuperaAlunos().filter() { $0.id == id} //Verifica se ID existe no dicionario de alunos
         
         if alunos.count > 0 {
             guard let alunoEncontrado = alunos.first else { return }
@@ -71,6 +71,12 @@ class AlunoDAO: NSObject {
         
         atualizaContexto()
     }
+    
+    func deletaAluno(aluno: Aluno) {
+        contexto.delete(aluno)
+        atualizaContexto()
+    }
+    
     
     func atualizaContexto() {
         
