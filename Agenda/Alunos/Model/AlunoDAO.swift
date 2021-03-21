@@ -38,19 +38,35 @@ class AlunoDAO: NSObject {
     }
     
     func salvaAluno(dicionarioDeAluno: Dictionary<String, Any>) {
-        let aluno = Aluno(context: contexto)
-        aluno.nome = dicionarioDeAluno["nome"] as? String
-        aluno.endereco = dicionarioDeAluno["endereco"] as? String
-        aluno.telefone = dicionarioDeAluno["telefone"] as? String
-        aluno.site = dicionarioDeAluno["site"] as? String
+        
+        var aluno: NSManagedObject?
+        
+        guard let id = UUID(uuidString: dicionarioDeAluno["id"] as! String) else { return }
+        
+        let alunos = recuperaAlunos().filter() { $0.id == id} //Verifica se ID existe no dicionario de alunos	
+        
+        if alunos.count > 0 {
+            guard let alunoEncontrado = alunos.first else { return }
+            aluno = alunoEncontrado
+        }
+        else {
+            let entidade = NSEntityDescription.entity(forEntityName: "Aluno", in: contexto)
+            aluno = NSManagedObject(entity: entidade!, insertInto: contexto)
+        }
+  
+        aluno?.setValue(id, forKey: "id")
+        aluno?.setValue(dicionarioDeAluno["nome"] as? String, forKey: "nome")
+        aluno?.setValue(dicionarioDeAluno["endereco"] as? String, forKey: "endereco")
+        aluno?.setValue(dicionarioDeAluno["telefone"] as? String, forKey: "telefone")
+        aluno?.setValue(dicionarioDeAluno["site"] as? String, forKey: "site")
         guard let nota = dicionarioDeAluno["nota"] else { return }
         
         if (nota is String) {
-            aluno.nota = (dicionarioDeAluno["nota"] as! NSString).doubleValue
+            aluno?.setValue((dicionarioDeAluno["nota"] as! NSString).doubleValue, forKey: "nota")
         }
         else {
             let conversaoDeNota = String(describing: nota)
-            aluno.nota = (conversaoDeNota as NSString).doubleValue
+            aluno?.setValue((conversaoDeNota as NSString).doubleValue, forKey: "nota")
         }
         
         atualizaContexto()
