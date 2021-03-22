@@ -25,6 +25,8 @@
 		89A8FCF12606933F00E7EDEE /* AlunoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A8FCF02606933F00E7EDEE /* AlunoAPI.swift */; };
 		89A8FCF526069FC800E7EDEE /* Repositorio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A8FCF426069FC800E7EDEE /* Repositorio.swift */; };
 		89A8FCF92606A18100E7EDEE /* AlunoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A8FCF82606A18100E7EDEE /* AlunoDAO.swift */; };
+		89ADEADA2608066A00256226 /* Configuracao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADEAD92608066A00256226 /* Configuracao.swift */; };
+		89ADEADD260832CA00256226 /* AlunoUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADEADC260832CA00256226 /* AlunoUserDefaults.swift */; };
 		A281001A1FD5C2F700E1BDF1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28100191FD5C2F700E1BDF1 /* ImagePicker.swift */; };
 		B911302A1FE05358002768A7 /* CalculaMediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91130291FE05358002768A7 /* CalculaMediaAPI.swift */; };
 		B939B9B81FDAC2630084A557 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939B9B71FDAC2630084A557 /* Mensagem.swift */; };
@@ -56,6 +58,8 @@
 		89A8FCF02606933F00E7EDEE /* AlunoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoAPI.swift; sourceTree = "<group>"; };
 		89A8FCF426069FC800E7EDEE /* Repositorio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorio.swift; sourceTree = "<group>"; };
 		89A8FCF82606A18100E7EDEE /* AlunoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoDAO.swift; sourceTree = "<group>"; };
+		89ADEAD92608066A00256226 /* Configuracao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuracao.swift; sourceTree = "<group>"; };
+		89ADEADC260832CA00256226 /* AlunoUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoUserDefaults.swift; sourceTree = "<group>"; };
 		A28100191FD5C2F700E1BDF1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B91130291FE05358002768A7 /* CalculaMediaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculaMediaAPI.swift; sourceTree = "<group>"; };
 		B939B9B71FDAC2630084A557 /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
@@ -176,9 +180,10 @@
 		89A8FCEF2606931600E7EDEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				89A8FCF82606A18100E7EDEE /* AlunoDAO.swift */,
 				89A8FCF02606933F00E7EDEE /* AlunoAPI.swift */,
+				89A8FCF82606A18100E7EDEE /* AlunoDAO.swift */,
 				89A8FCF426069FC800E7EDEE /* Repositorio.swift */,
+				89ADEADC260832CA00256226 /* AlunoUserDefaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				897D80C52607AB3300771FF6 /* LigacaoTelefonica.swift */,
 				897D80C82607AE4300771FF6 /* Safari.swift */,
 				897D80CB2607AF7000771FF6 /* Filtro.swift */,
+				89ADEAD92608066A00256226 /* Configuracao.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -372,8 +378,10 @@
 				B911302A1FE05358002768A7 /* CalculaMediaAPI.swift in Sources */,
 				03AA17681FC843B1003CB2B8 /* HomeTableViewCell.swift in Sources */,
 				897D80C92607AE4300771FF6 /* Safari.swift in Sources */,
+				89ADEADA2608066A00256226 /* Configuracao.swift in Sources */,
 				B9518EFC1FD9BCEB00EBAFA5 /* MenuOpcoesAlunos.swift in Sources */,
 				B939B9B81FDAC2630084A557 /* Mensagem.swift in Sources */,
+				89ADEADD260832CA00256226 /* AlunoUserDefaults.swift in Sources */,
 				B9D565A71FE14ECA00BDA536 /* Notificacoes.swift in Sources */,
 				897D80C62607AB3300771FF6 /* LigacaoTelefonica.swift in Sources */,
 				89A8FCF526069FC800E7EDEE /* Repositorio.swift in Sources */,

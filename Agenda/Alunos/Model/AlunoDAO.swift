@@ -38,6 +38,7 @@ class AlunoDAO: NSObject {
     }
     
     func salvaAluno(dicionarioDeAluno: Dictionary<String, Any>) {
+        print("executei2")
         
         var aluno: NSManagedObject?
         
@@ -59,6 +60,7 @@ class AlunoDAO: NSObject {
         aluno?.setValue(dicionarioDeAluno["endereco"] as? String, forKey: "endereco")
         aluno?.setValue(dicionarioDeAluno["telefone"] as? String, forKey: "telefone")
         aluno?.setValue(dicionarioDeAluno["site"] as? String, forKey: "site")
+        aluno?.setValue(dicionarioDeAluno["sincronizado"] as? Bool, forKey: "sincronizado")
         guard let nota = dicionarioDeAluno["nota"] else { return }
         
         if (nota is String) {
